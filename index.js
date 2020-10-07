@@ -88,8 +88,9 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
-   /*your code here*/
+function addFlavor(currentFlavors, newFlavor){
+   currentFlavors.unshift(newFlavor);
+   return currentFlavors
 }
 
 
@@ -104,8 +105,9 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
-   /*your code here*/
+function removeLastFlavor(currentFlavors){
+    currentFlavors.pop();
+    return currentFlavors
 }
 
 
@@ -120,10 +122,10 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
-    /*your code here*/
+function getFlavorByIndex(currentFlavors, indexPosition){
+    let positionedFlavor = currentFlavors[indexPosition];
+    return positionedFlavor
 }
-
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
@@ -139,9 +141,13 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-    /*your code here*/
-}
+
+
+    function removeFlavorByName(arr, string) {
+        let index = arr.indexOf(string);
+        arr.splice(index, 1)
+        return arr
+      }
 
 
 
@@ -164,8 +170,14 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-    /*your code here*/
+function filterByWord(arr, string){
+    let filteredArray = [];
+    for (let i=0; i<arr.length; i++){
+        if(arr[i].includes(string)){
+            filteredArray.push(arr[i]);
+        }
+    }
+    return filteredArray;
 }
 
 
