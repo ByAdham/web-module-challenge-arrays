@@ -41,12 +41,13 @@ With all of these changes going on, we don't want to lose track of the actual, o
 
 /*
 Use the copy function below to do the following:
-    1. Receive two arguments: one for your new array and one for your original array
+    1. Receive 1 argument: one for your new array and one for your original array
     2. Return the new array that holds an exact copy of the old array  
 */
 
-function copy(/*your code here*/){
-    /*your code here*/
+function copy(flavorsList){
+   const copiedList = [...originalFlavors]
+   return copiedList;
 }    
 
 
@@ -64,8 +65,14 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
-   /*your code here*/
+function is31Flavors(passedArr){
+    let Status;
+    if (passedArr.length = 31) {
+        Status = true
+   }else{
+       Status = false
+   }
+   return Status;
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
